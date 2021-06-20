@@ -14,19 +14,35 @@ using namespace calc;
 
 int main() {
 
-// Objeto 1
-tCircuitos Circ1; 
+float r1;
+float r2;
+float v1;
 
-// Passa as informações de R1, R2 e V1 do "objeto 1" ao construtor.
-Circ1.insereValores(220,470,10); 
+cout <<"********** CIRCUIRTO **********";
+cout<<endl;
 
-cout<<"Objeto 1"<<endl;
+cout<<"Insira o valor de R1: ";
+cin>>r1;
 
-Circ1.Res_Serie();
-Circ1.Res_Paralelo();
-Circ1.Corrente_Serie();
-Circ1.Corrente_Paralelo();
-Circ1.Potencia_Serie();
-Circ1.Potencia_Paralelo();
+cout<<"Insira o valor de R2: ";
+cin>>r2;
+
+cout<<"Insira o valor de V1: ";
+cin>>v1;
+cout<<endl;
+
+tCircuitos Circuito;
+Circuito.insereValores(r1,r2,v1);
+
+cout<<"Calculos de resistência, corrente e potência: ";
+cout<<endl;
+
+Circuito.Calculo();
 
 }
+
+
+
+
+
+

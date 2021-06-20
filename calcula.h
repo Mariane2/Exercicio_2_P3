@@ -21,32 +21,25 @@ namespace calc{
   v1 = V1;
   }
  
-  void Res_Serie(){ // Função Calcula Resistencia em serie 
+  void Calculo(){ // Função calcula resistencia, corrente e potencia. 
+
   res_serie = r1 + r2;
   cout<<"Resistência em série: " << res_serie <<" ohms" << endl;
-  }
-
-  void Res_Paralelo(){ // Função Calcula Resistencia em paralelo 
+  
   res_paralelo = (r1*r2)/(r1+r2);
   cout<<"Resistência em paralelo: " << res_paralelo <<" ohms" << endl;
-  }
 
-  void Corrente_Serie(){ // Função Calcula Corrente do circuito em série 
   corrente_serie = v1/res_serie;
   cout<<"Corrente em série: " << corrente_serie << " A" << endl;
-  }
+  
 
-  void Corrente_Paralelo(){ // Função Calcula Corrente do circuito em paralelo
   corrente_paralelo = v1/res_paralelo;
   cout<<"Corrente em paralelo: " << corrente_paralelo << " A" << endl;
-  }
 
-  void Potencia_Serie(){
+  
   pot_serie = v1*corrente_serie;
   cout<<"Potencia em série: " << pot_serie << " W" << endl;
-  }
-
-  void Potencia_Paralelo(){
+  
   pot_paralelo = v1*corrente_paralelo;
   cout<<"Potencia em paralelo: " << pot_paralelo << " W" << endl;
   }
